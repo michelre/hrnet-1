@@ -1,9 +1,18 @@
-
+import { Link } from 'react-router-dom';
+import EmployeesTable from '../components/EmployeesTable';
 
 const EmployeeList = () => {
   return (
-    <div>EmployeeList</div>
+    <>
+    <h1>Current Employees</h1>
+      <EmployeesTable />
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+    </>
   )
 }
 
+
 export default EmployeeList
+
