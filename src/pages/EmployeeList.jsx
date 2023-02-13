@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import EmployeesTable from '../components/EmployeesTable';
+import { useSelector } from 'react-redux';
 
 const EmployeeList = () => {
   return (
