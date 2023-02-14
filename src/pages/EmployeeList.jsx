@@ -1,16 +1,19 @@
+import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import EmployeesTable from '../components/EmployeesTable';
-import { useSelector } from 'react-redux';
+
 
 const EmployeeList = () => {
   return (
-    <>
-    <h1>Current Employees</h1>
+    <div className='employee-list-container'>
+      <h1>Current Employees</h1>
       <EmployeesTable />
       <nav>
-        <Link to="/">Home</Link>
+        <Button variant="text">
+          <Link to="/">Home</Link>
+        </Button>
       </nav>
-    </>
+    </div>
   )
 }
 
