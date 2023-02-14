@@ -1,0 +1,87 @@
+.App {
+width: 100vw;
+    /* margin: 0 auto; */
+}
+
+.create-header {
+    text-align: center;
+}
+
+.create-header h1 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+
+.create-header h2 {
+    padding-top: 1rem;
+}
+
+.create-form {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+input {
+    width: fit-content;
+}
+
+.save-button {
+    width: fit-content;
+    align-self: center;
+}
+
+
+.form-field {
+    Width: 300px;
+    background-color: white;
+}
+
+.form-address-box {
+    background-color: #f7fbfd;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+fieldset {
+    margin: 0;
+    border-color: #42a5f5;
+    border-width: 1px;
+}
+
+@media screen and (max-width: 480px) {
+    .App{
+        margin-right:0;
+    }
+    .create-form {
+        margin: 0 auto;
+        padding-bottom: 2rem;
+    }
+
+    .form-address-box{
+        background-color: white;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .form-field{
+        width: 100%;
+        padding-right: 1rem;
+    }
+
+}
