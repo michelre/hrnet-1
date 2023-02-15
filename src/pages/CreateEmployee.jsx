@@ -6,6 +6,7 @@ import states from "../data/states"
 import { format } from "date-fns";
 import { employeesAction } from "../redux/employeeList-slice";
 import { useDispatch } from "react-redux";
+import Modal from "react-modal-rml";
 
 
 const CreateEmployee = () => {
@@ -19,6 +20,7 @@ const CreateEmployee = () => {
     const [state, setState] = useState(null);
     const [zipCode, setZipCode] = useState("");
     const [department, setDepartment] = useState(null);
+    const [showModal, setShowModal] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -47,6 +49,7 @@ const CreateEmployee = () => {
         setState(null);
         setZipCode("");
         setDepartment(null);
+        setShowModal(true)
     }
 
     return (
@@ -163,9 +166,15 @@ const CreateEmployee = () => {
                 <Button variant="contained" className="save-button" onClick={handleSave}>Save</Button>
 
             </form>
+            {showModal ?
+                <Modal
+                    closeModalFunction={() => setShowModal(false)}
+                    modalText={"Employee added"}
+                /> : ''
+            }
 
         </>
     )
 }
 
-export default CreateEmployee 
+export default CreateEmployee
